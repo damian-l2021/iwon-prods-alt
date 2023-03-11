@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tailwind": "npx tailwind -i ./styles/index.css -o ./styles/output.css --watch"
   },
   "dependencies": {
     "@types/node": "18.14.6",
@@ -15,6 +16,10 @@
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
   }
 }
