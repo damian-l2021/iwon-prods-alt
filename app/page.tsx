@@ -4,7 +4,6 @@ import Features from "../components/Features";
 import Works from "../components/Works";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import observer from "../utils/observer";
 
 export default function Home() {
   const [video, setVideo] = useState("/videos/hero-video.mp4");
