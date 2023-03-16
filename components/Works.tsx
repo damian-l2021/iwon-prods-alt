@@ -9,10 +9,10 @@ export default function Works({ song, artist }: any) {
          border-4 border-darkGreen bg-transparent p-4 backdrop-blur"
         >
           <h1 className="proxima-bold text-center text-4xl text-lighterGray">
-            BOBO
+            {song}
           </h1>
           <p className="proxima-light text-center text-base text-lightGray">
-            Maria Angelic x Maria Becerra x Bag Gyal
+            {artist}
           </p>
         </div>
       </div>

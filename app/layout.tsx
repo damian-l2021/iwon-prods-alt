@@ -3,11 +3,8 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import "../styles/output.css";
 import { Poppins } from "next/font/google";
-
-const poppins = Poppins({
-  weight: "500",
-  subsets: ["latin"],
-});
+import Menu from "../components/Menu";
+import BurgerMenu from "../components/BurgerMenu";
 
 export default function RootLayout({
   children,
@@ -24,10 +21,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`bg-darkGray ${poppins.className}`}>
+      <body className={`bg-darkGray proxima`}>
         <NavBar />
+        <Menu isVisible={false}/>
         <main className="mx-auto xl:w-auto">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
