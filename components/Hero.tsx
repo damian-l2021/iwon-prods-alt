@@ -4,21 +4,11 @@ import { BsWhatsapp, BsYoutube, BsInstagram, BsTiktok } from "react-icons/bs";
 import { Roboto_Serif, Montserrat } from "next/font/google";
 import { IoIosArrowDown } from "react-icons/io";
 import { smoothScroll } from "../utils/smoothScroll";
+import getOS from "../utils/getOS";
 
-const roboto_serif = Roboto_Serif({
-  subsets: ["latin"],
-  weight: "300",
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: "700",
-});
-
-const montserrat_light = Montserrat({
-  subsets: ["latin"],
-  weight: "300",
-});
+const linkCel = "https://wa.link/ydjwnw";
+const linkPC =
+  "https://web.whatsapp.com/send?phone=541128197638&text=Hola%2C%20quiero%20un%20video!";
 
 function Hero() {
   const [isTitleVisible, setIsTitleVisible] = useState(false);
@@ -49,7 +39,7 @@ function Hero() {
 
   return (
     <div className="flex h-screen w-full items-start justify-center gap-[200px] overflow-hidden">
-      {/* social */}
+      {/*################## SOCIAL ###########################*/}
       <div className="absolute left-[30px] flex h-full items-center">
         <div
           className={`hidden translate-x-[-100px] transform flex-col gap-[20px]
@@ -68,18 +58,18 @@ function Hero() {
           </a>
         </div>
       </div>
-      {/* lights */}
+      {/*################## LIGHTS ###########################*/}
       <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
       <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
       <div className="absolute top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
       <div className="fixed top-0 z-[-9] hidden h-full w-full bg-darkGray opacity-50 md:flex"></div>
-      {/* main text */}
+      {/*################## MAIN TEXT ###########################*/}
       <div
         className="my-auto flex max-w-[272px] flex-col items-center justify-start gap-[20px] xl:mt-0
       xl:h-screen xl:min-w-[1275px] xl:justify-center"
       >
         <h1
-          className={`proxima-black text-center text-[24px] font-bold text-[#fff] opacity-0 duration-700 xl:text-[64px] xl:leading-[90px] ${
+          className={`proxima-black text-center text-2xl font-bold text-[#fff] opacity-0 duration-700 xl:text-6xl xl:leading-[90px] ${
             isTitleVisible ? "opacity-100" : ""
           }`}
         >
@@ -91,7 +81,7 @@ function Hero() {
           En Calidad De Cine.
         </h1>
         <p
-          className={`proxima-light text-center text-[12px] text-lighterGray opacity-0 duration-700 xl:text-[20px] ${
+          className={`proxima-light text-center text-xs text-lighterGray opacity-0 duration-700 xl:text-xl ${
             isSubtitleVisible ? "opacity-100" : ""
           }`}
         >
@@ -99,20 +89,16 @@ function Hero() {
           PARTICIPAR"
         </p>
         <a
-          href="#"
-          className={`proxima-bold group my-[20px] flex
-         w-max items-center gap-[20px] rounded-[40px]
-         bg-darkGreen px-[45px]
-         py-[22.5px] text-[20px] text-lighterGray opacity-0 shadow-[0_11px_19px_#222222d9] duration-[.2s] xl:text-[20px] ${
-           isButtonVisible ? "opacity-100" : ""
-         } hover:outline hover:outline-8 hover:outline-lightGreen`}
+          href={`${getOS(navigator.userAgent, linkCel, linkPC)}`}
+          className={`proxima-bold group my-[20px] flex w-max items-center gap-[20px] rounded-[40px] bg-darkGreen px-[45px] py-[22.5px] text-[20px] text-lighterGray opacity-0 shadow-[0_11px_19px_#222222d9] duration-[.2s] ${
+            isButtonVisible ? "opacity-100" : ""
+          } hover:outline hover:outline-8 hover:outline-lightGreen`}
+          target="_blank"
         >
           <div>
             <BsWhatsapp size={"28px"} color={"#f7f7f7"} />{" "}
           </div>
-          <span className="text-lighterGray">
-            QUIERO PARTICIPAR
-          </span>
+          <span className="text-lighterGray">QUIERO PARTICIPAR</span>
         </a>
       </div>
       <div className="absolute bottom-10 flex justify-center">

@@ -3,8 +3,6 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import Works from "../components/Works";
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
-import Menu from "../components/Menu";
 
 export default function Home() {
   const [video, setVideo] = useState("/videos/hero-video.mp4");
