@@ -10,7 +10,7 @@ export default function Features() {
         <div className="flex w-72 xl:w-auto mx-auto gap-10">
           <div className="rounded-[30px] bg-lightGreen w-5 shadow-[0_11px_29px_#5FFC7B] h-[400px] my-auto">
           </div>
-          <div className="flex flex-col gap-[16px] rounded-[30px] bg-darkGreen p-10 w-[720px] h-[600px] col-span-10">
+          <div className="flex flex-col gap-[16px] rounded-[30px] bg-darkGreen p-10 w-[720px] h-[600px] col-span-10 border-l-2 border-l-lightGreen border-r-2 border-r-lightGreen">
             <h2 className="text-center text-3xl proxima text-lighterGray">La Mejor Calidad De Video</h2>
             <h2 className="text-center text-3xl proxima text-lighterGray">La Mejor Calidad De Video</h2>
             <h2 className="text-center text-3xl proxima text-lighterGray">La Mejor Calidad De Video</h2>
