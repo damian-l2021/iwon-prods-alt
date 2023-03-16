@@ -53,7 +53,7 @@ function Hero() {
           <a href="https://www.youtube.com/@leonwayne6973" target="_blank">
             <BsYoutube color="#f7f7f7" size="20px" />
           </a>
-          <a href="https://www.instagram.com/luzeneltrap/" target="_blank">
+          <a href="https://www.instagram.com/iwon.audiovisual/" target="_blank">
             <BsInstagram color="#f7f7f7" size="20px" />
           </a>
           <a href="https://www.tiktok.com/@leonwaayne?lang=en" target="_blank">
@@ -76,24 +76,23 @@ function Hero() {
             isTitleVisible ? "opacity-100" : ""
           }`}
         >
-          Participa En Nuestro <br />
+          Filma Con Nosotros. <br />
           <span className="bg-lightGreen py-2 px-4 text-[#2c2c2c]">
-            Sorteo De Videoclips
+            En Calidad De Cine.
           </span>{" "}
           <br />
-          En Calidad De Cine.
+          <span className="">Al Mejor Precio.</span>
         </h1>
         <p
           className={`proxima-light text-center text-xs text-lighterGray opacity-0 duration-700 xl:text-xl ${
             isSubtitleVisible ? "opacity-100" : ""
           }`}
         >
-          Envianos un mensaje a nuestro WhatsApp <br /> diciendo "QUIERO
-          PARTICIPAR"
+          Mandános un mensaje contándonos lo que queres filmar.
         </p>
         <a
           href={`${getOS(navigator, linkCel, linkPC)}`}
-          className={`proxima-bold group my-[20px] flex w-max items-center gap-[20px] rounded-[40px] bg-darkGreen px-[45px] py-[22.5px] text-[20px] text-lighterGray opacity-0 shadow-[0_11px_19px_#222222d9] duration-[.2s] ${
+          className={`btn-wp group proxima-bold group my-[20px] flex w-max items-center gap-[20px] rounded-[40px] bg-darkGreen px-[45px] py-[22.5px] text-[20px] text-lighterGray opacity-0 shadow-[0_11px_19px_#222222d9] duration-[.2s] ${
             isButtonVisible ? "opacity-100" : ""
           } hover:outline hover:outline-8 hover:outline-lightGreen`}
           target="_blank"
@@ -101,13 +100,19 @@ function Hero() {
           <div>
             <BsWhatsapp size={"28px"} color={"#f7f7f7"} />{" "}
           </div>
-          <span className="text-lighterGray">QUIERO PARTICIPAR</span>
+          <span className="text-lighterGray transition-all tracking-wider">FILMAR AHORA</span>
         </a>
       </div>
+      {/*################## SCROLL BTN ###########################*/}
       <div className="absolute bottom-10 flex justify-center">
-        <a className="animate-pulse" href="#features">
+        <button
+          className="animate-pulse"
+          onClick={() => {
+            smoothScroll("features", 1000, 0);
+          }}
+        >
           <IoIosArrowDown style={{ color: "#f7f7f7", fontSize: "40px" }} />
-        </a>
+        </button>
       </div>
     </div>
   );

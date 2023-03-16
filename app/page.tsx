@@ -36,6 +36,7 @@ export default function Home() {
         <Features />
       </div>
       <Works song="BOBO" artist="Maria Angelic x Maria Becerra x Bag Gyal" />
+      <Works song="BOBO" artist="Maria Angelic x Maria Becerra x Bag Gyal" />
     </div>
   );
 }

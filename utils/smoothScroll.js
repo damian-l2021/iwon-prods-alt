@@ -1,5 +1,5 @@
 const smoothScroll = (target, duration, compensation) => {
-    let elemTarget = target;
+    let elemTarget = document.getElementById(target)
     let elemPos = elemTarget.getBoundingClientRect().top - compensation;
     let initialPos = window.scrollY;
     let initialTime = null;
