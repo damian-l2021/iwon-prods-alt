@@ -1944,6 +1944,14 @@ video {
   border-top-width: 1px;
 }
 
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -1971,6 +1979,16 @@ video {
 .border-darkGreen {
   --tw-border-opacity: 1;
   border-color: rgb(12 111 32 / var(--tw-border-opacity));
+}
+
+.border-l-lightGreen {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(95 252 123 / var(--tw-border-opacity));
+}
+
+.border-r-lightGreen {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(95 252 123 / var(--tw-border-opacity));
 }
 
 .bg-\[\#2c2c2c\] {
