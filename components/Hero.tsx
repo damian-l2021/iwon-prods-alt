@@ -5,6 +5,7 @@ import { Roboto_Serif, Montserrat } from "next/font/google";
 import { IoIosArrowDown } from "react-icons/io";
 import { smoothScroll } from "../utils/smoothScroll";
 import getOS from "../utils/getOS";
+import os from "os";
 
 const linkCel = "https://wa.link/ydjwnw";
 const linkPC =
@@ -15,6 +16,8 @@ function Hero() {
   const [isSubtitleVisible, setIsSubtitleVisible] = useState(false);
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const [isSocialVisible, setIsSocialVisible] = useState(false);
+
+  let navigator = os.platform();
 
   useEffect(() => {
     setTimeout(() => {
@@ -89,7 +92,7 @@ function Hero() {
           PARTICIPAR"
         </p>
         <a
-          href={`${getOS(navigator.userAgent, linkCel, linkPC)}`}
+          href={`${getOS(navigator, linkCel, linkPC)}`}
           className={`proxima-bold group my-[20px] flex w-max items-center gap-[20px] rounded-[40px] bg-darkGreen px-[45px] py-[22.5px] text-[20px] text-lighterGray opacity-0 shadow-[0_11px_19px_#222222d9] duration-[.2s] ${
             isButtonVisible ? "opacity-100" : ""
           } hover:outline hover:outline-8 hover:outline-lightGreen`}

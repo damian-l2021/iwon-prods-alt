@@ -1,6 +1,6 @@
 
-export default function getOS(user:string, linkCel:string, linkPC:string){
-    if(user.includes("Android") || user.includes("iPhone")){
+export default function getOS(os:string, linkCel:string, linkPC:string){
+    if(os.toLowerCase() == "android" || os.toLowerCase() == "darwin"){
         return linkCel;
     } else {
         return linkPC;
