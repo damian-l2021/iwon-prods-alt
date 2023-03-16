@@ -55,7 +55,7 @@ function Hero() {
           className={`hidden translate-x-[-100px] transform flex-col gap-[20px]
           rounded-[15px] bg-[#2c2c2c] p-[15px] shadow-[0_11px_29px_#222222] transition duration-[.5s] ease-out xl:flex ${
             isSocialVisible ? "translate-x-[0]" : ""
-          }`}
+          } border-r-2 border-r-lightGreen`}
         >
           <a href="https://www.youtube.com/@leonwayne6973" target="_blank">
             <BsYoutube color="#f7f7f7" size="20px" />
@@ -69,7 +69,8 @@ function Hero() {
         </div>
       </div>
       {/* lights */}
-      <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[5px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
+      <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
+      <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
       <div className="absolute top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
       <div className="fixed top-0 z-[-9] hidden h-full w-full bg-darkGray opacity-50 md:flex"></div>
       {/* main text */}
@@ -104,13 +105,12 @@ function Hero() {
          bg-darkGreen px-[45px]
          py-[22.5px] text-[20px] text-lighterGray opacity-0 shadow-[0_11px_19px_#222222d9] duration-[.2s] xl:text-[20px] ${
            isButtonVisible ? "opacity-100" : ""
-         } hover:bg-lighterGray hover:text-darkGreen hover:outline hover:outline-8 hover:outline-lightGreen`}
+         } hover:outline hover:outline-8 hover:outline-lightGreen`}
         >
-          <div className="rounded-[50%] bg-darkGreen group-hover:mix-blend-multiply">
-            <div className=""></div>
+          <div>
             <BsWhatsapp size={"28px"} color={"#f7f7f7"} />{" "}
           </div>
-          <span className="text-lighterGray group-hover:text-darkGreen">
+          <span className="text-lighterGray">
             QUIERO PARTICIPAR
           </span>
         </a>

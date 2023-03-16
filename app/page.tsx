@@ -17,6 +17,7 @@ export default function Home() {
         setVideo("/videos/hero-video.mp4");
       }
     });
+
   }, []);
 
   return (
