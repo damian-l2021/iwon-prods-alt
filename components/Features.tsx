@@ -23,8 +23,8 @@ export default function Features() {
       className="relative flex h-screen w-full items-center justify-center bg-darkGray"
     >
       {/*################## LIGHTS ###########################*/}
-      <div className="absolute right-[310px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] md:flex"></div>
-      <div className="absolute left-[310px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] md:flex">
+      <div className="absolute right-[20%] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] md:flex"></div>
+      <div className="absolute left-[20%] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] md:flex">
         <img src="images/trapecio.svg" alt="" />
       </div>
       <div className="mx-[200px] flex flex-col items-center justify-center">
@@ -38,7 +38,7 @@ export default function Features() {
             De Videoclips En <br /> <span className="bg-gradient-to-r from-darkGreen via-lightGreen to-darkGreen bg-clip-text text-transparent">Calidad De Cine.</span>
           </span>
         </h2>
-        <p className="proxima mb-6 text-center text-lg text-lightGray md:text-3xl">
+        <p className="proxima-light mb-6 text-center text-lg text-lightGray md:text-3xl">
           Hay Ganadores Todos Los Meses!
         </p>
         <div className="relative">

@@ -1,41 +1,32 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import CrossMenu from "./CrossMenu";
 
-export default function Menu({ isVisible }: any) {
-  const [isMenuVisible, setIsMenuVisible] = useState(isVisible);
-
-  const handleClick = () => {
-    isMenuVisible ? setIsMenuVisible(false) : setIsMenuVisible(true);
-  };
-
+export default function Menu({ isActive }: any) {
   return (
     <div
-      className={`absolute top-0 z-[100] h-screen w-full bg-darkGreen 
+      id="menu"
+      className={`fixed top-0 bottom-0 z-[1000] h-screen w-full bg-darkGray 
     ${
-      isMenuVisible ? "left-0" : "left-[-1920px]"
-    } items-center justify-center transition-transform`}
+      isActive ? "menu-active" : "menu-hidden"
+    } flex items-center justify-center transition-transform`}
     >
-      <button className="absolute top-4 left-4" onClick={handleClick}>
-        {isMenuVisible ? (
-          <IoMdClose
-            className="transition-all"
-            style={{ color: "#f7f7f7", fontSize: "30px" }}
-          />
-        ) : (
-          <IoMdMenu style={{ color: "#f7f7f7", fontSize: "30px" }} />
-        )}
-      </button>
-      <div className="flex flex-col items-center justify-center gap-10">
-        <a className="proxima text-2xl text-lighterGray" href="#">
+      <div className="absolute top-4 left-4">
+        <CrossMenu />
+      </div>
+      <div className="relative flex flex-col items-center justify-center gap-10">
+        <a className="proxima text-2xl text-lightGreen" href="#">
           Nuestros Trabajos
         </a>
-        <a className="proxima text-2xl text-lighterGray" href="#">
+        <a className="proxima text-2xl text-lightGreen" href="#">
           Promociones
         </a>
-        <a className="proxima text-2xl text-lighterGray" href="#">
+        <a className="proxima text-2xl text-lightGreen" href="#">
           Ganá Un Video
         </a>
+        <div className="absolute bottom-[-40%] md:top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
+        <div className="absolute top-[-40%] md:top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
       </div>
     </div>
   );
