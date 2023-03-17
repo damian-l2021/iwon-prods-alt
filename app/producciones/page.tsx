@@ -13,7 +13,6 @@ export default function Producciones() {
         </h1>
         <div className="grid grid-cols-3 gap-10">
           <div className="col-span-1">
-            <img src="/images/iwon-logo.svg" alt="" />
             <Video src="/videos/antes-27.mp4"/>
           </div>
           <div className="col-span-1">
