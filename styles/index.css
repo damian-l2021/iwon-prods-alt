@@ -35,3 +35,11 @@
 .proxima-bold {
     font-family: 'Proxima Nova Bold';
 }
+
+.menu-active {
+    left: 0;
+}
+
+.menu-hidden {
+    left: -1920px;
+}
