@@ -1,17 +1,18 @@
 import React from "react";
 import { playVideo, pauseVideo } from "../utils/handleVideo";
 
-export default function Video({ src }: any) {
+export default function Video({ src, poster }: any) {
   return (
     <video
-    
       data-video
-      className="rounded-[30px] transition duration-1000 hover:scale-110"
+      className="transition duration-300 xl:hover:scale-[2]"
       width={400}
       muted
+      poster={poster}
       src={src}
-      onMouseOver={(e) => playVideo(e.target)}
-      onMouseLeave={(e) => pauseVideo(e.target)}
+      onMouseOver={(e) =>
+         setTimeout(() => { playVideo(e.target) }, 1000) }
+      onMouseOut={(e) => pauseVideo(e.target)}
     ></video>
   );
 }

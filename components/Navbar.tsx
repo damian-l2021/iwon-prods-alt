@@ -44,17 +44,17 @@ export default function NavBar(props: any) {
            tracking-widest text-lighterGray
          duration-300 hover:text-lightGreen"
             style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}
-            href="/videos"
+            href="/precios"
           >
-            Promos
+            Precios
           </a>
           <a
             className="proxima overflow-hidden tracking-widest text-lighterGray
           duration-300 hover:text-lightGreen"
             style={{ textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}
-            href="/sorteo"
+            href="/contacto"
           >
-            Sorteo
+            Contacto
           </a>
         </div>
       </div>

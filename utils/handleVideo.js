@@ -3,6 +3,6 @@ export function playVideo(video){
     video.volume = 1;
 }
 export function pauseVideo(video){
-    video.currentTime = 0;
     video.pause()
+    video.load()
 }
