@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex flex-col">
       <div>
         <video
-          className="fixed top-0 z-[-10] hidden w-full md:flex"
+          className="fixed top-0 z-[-10] w-full md:flex"
           src={video}
           autoPlay
           muted
