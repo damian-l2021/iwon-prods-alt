@@ -5,18 +5,7 @@ import Works from "../components/Works";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [video, setVideo] = useState("/videos/hero-video.mp4");
-
-  useEffect(() => {
-    document.addEventListener("scroll", () => {
-      if (scrollY >= 720) {
-        setVideo("/videos/video-prueba-1.mp4");
-      } else {
-        setVideo("/videos/hero-video.mp4");
-      }
-    });
-
-  }, []);
+  const [video, setVideo] = useState("/videos/trailer.mp4");
 
   return (
     <div className="flex flex-col">
