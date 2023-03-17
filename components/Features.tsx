@@ -32,10 +32,10 @@ export default function Features() {
           <span>
             <span>Participá</span> {isMobile ? <br /> : null} En Nuestro Sorteo
           </span>{" "}
-          {isMobile ? <br /> : null}
+          <br />
           <span>
             {" "}
-            De Videoclips En {isMobile ? <br /> : null} <span className="bg-gradient-to-r from-darkGreen via-lightGreen to-darkGreen bg-clip-text text-transparent">Calidad De Cine.</span>
+            De Videoclips En <br /> <span className="bg-gradient-to-r from-darkGreen via-lightGreen to-darkGreen bg-clip-text text-transparent">Calidad De Cine.</span>
           </span>
         </h2>
         <p className="proxima mb-6 text-center text-lg text-lightGray md:text-3xl">
