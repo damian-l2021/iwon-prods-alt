@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import getOS from "../utils/getOS";
 import os from "os";
 import { BsWhatsapp } from "react-icons/bs";
 
 export default function Features() {
-  const linkCel = "https://wa.link/pfrb02";
+  const [isMobile, setIsMobile] = useState(Boolean);
+
+  useEffect(() => {
+    innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+  }, []);
+
+  const linkCel =
+    "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Participar%20Del%20Sorteo!";
   const linkPC =
-    "https://web.whatsapp.com/send?phone=541128197638&text=Quiero%20Participar%20Del%20Sorteo!";
+    "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Participar%20Del%20Sorteo!";
 
   let navigator = os.platform();
 
@@ -16,22 +23,28 @@ export default function Features() {
       className="relative flex h-screen w-full items-center justify-center bg-darkGray"
     >
       {/*################## LIGHTS ###########################*/}
-      <div className="absolute right-[310px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
-      <div className="absolute left-[310px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex">
+      <div className="absolute right-[310px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] md:flex"></div>
+      <div className="absolute left-[310px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] md:flex">
         <img src="images/trapecio.svg" alt="" />
       </div>
       <div className="mx-[200px] flex flex-col items-center justify-center">
-        <h2 className="proxima-bold mb-6 text-center text-6xl text-lighterGray">
-          <span className="mb-2 inline-block">Participa En Nuestro Sorteo</span>{" "}
-          <br /> De Videoclips En Calidad De Cine.
+        <h2 className="proxima-bold mb-6 text-center text-4xl text-lighterGray xl:text-6xl">
+          <span>
+            <span>Participá</span> {isMobile ? <br /> : null} En Nuestro Sorteo
+          </span>{" "}
+          {isMobile ? <br /> : null}
+          <span>
+            {" "}
+            De Videoclips En {isMobile ? <br /> : null} <span className="bg-gradient-to-r from-darkGreen via-lightGreen to-darkGreen bg-clip-text text-transparent">Calidad De Cine.</span>
+          </span>
         </h2>
-        <p className="proxima mb-6 text-center text-3xl text-lightGray">
+        <p className="proxima mb-6 text-center text-lg text-lightGray md:text-3xl">
           Hay Ganadores Todos Los Meses!
         </p>
         <div className="relative">
           <a
             href={`${getOS(navigator, linkCel, linkPC)}`}
-            className={`proxima-bold group group relative my-[20px] flex w-max items-center gap-[20px] rounded-[40px] border-2 border-lightGreen bg-transparent px-[45px] py-[22.5px] text-[20px] text-lighterGray duration-[.2s] hover:shadow-[0_0_20px_#5FFC7B]`}
+            className={`proxima-bold group group relative my-[20px] flex w-max items-center gap-[20px] rounded-[40px] border-2 border-lightGreen bg-transparent px-[45px] py-[22.5px] text-lg text-lighterGray duration-[.2s] hover:shadow-[0_0_20px_#5FFC7B] md:text-xl`}
             target="_blank"
           >
             <div>
@@ -43,7 +56,7 @@ export default function Features() {
           </a>
         </div>
       </div>
-      <div className="absolute bottom-0 w-[400px] h-[5px] bg-lightGreen rounded-[50%] blur-md"></div>
+      <div className="absolute bottom-0 h-[5px] w-[400px] rounded-[50%] bg-lightGreen blur-md"></div>
     </div>
   );
 }

@@ -7,15 +7,16 @@ import { smoothScroll } from "../utils/smoothScroll";
 import getOS from "../utils/getOS";
 import os from "os";
 
-const linkCel = "https://wa.link/ydjwnw";
+const linkCel = "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20quiero%20filmar!";
 const linkPC =
-  "https://web.whatsapp.com/send?phone=541128197638&text=Hola%2C%20quiero%20un%20video!";
+  "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20quiero%20filmar!";
 
 function Hero() {
   const [isTitleVisible, setIsTitleVisible] = useState(false);
   const [isSubtitleVisible, setIsSubtitleVisible] = useState(false);
   const [isButtonVisible, setIsButtonVisible] = useState(false);
   const [isSocialVisible, setIsSocialVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(Boolean);
 
   let navigator = os.platform();
 
@@ -32,6 +33,8 @@ function Hero() {
     setTimeout(() => {
       setIsButtonVisible(true);
     }, 2000);
+
+    innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
   }, []);
 
   useEffect(() => {
@@ -64,7 +67,7 @@ function Hero() {
       {/*################## LIGHTS ###########################*/}
       <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
       <div className="absolute right-[30px] top-[25%] hidden h-[400px] w-[10px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:flex"></div>
-      <div className="absolute top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
+      <div className="absolute bottom-[10%] md:top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
       <div className="fixed top-0 z-[-9] hidden h-full w-full bg-darkGray opacity-50 md:flex"></div>
       {/*################## MAIN TEXT ###########################*/}
       <div
@@ -72,19 +75,19 @@ function Hero() {
       xl:h-screen xl:min-w-[1275px] xl:justify-center"
       >
         <h1
-          className={`proxima-black text-center text-2xl font-bold text-[#fff] opacity-0 duration-700 xl:text-6xl xl:leading-[90px] ${
+          className={`proxima-black text-center text-4xl font-bold text-[#fff] opacity-0 duration-700 xl:text-6xl xl:leading-[90px] ${
             isTitleVisible ? "opacity-100" : ""
           }`}
         >
           Filma Con Nosotros. <br />
-          <span className="bg-lightGreen py-2 px-4 text-[#2c2c2c]">
-            En Calidad De Cine.
+          <span className="bg-gradient-to-r text-center w-max from-darkGreen via-lightGreen to-darkGreen bg-clip-text xl:leading-none text-transparent">
+            En Calidad {isMobile ? <br/> : null} De Cine.
           </span>{" "}
           <br />
           <span className="">Al Mejor Precio.</span>
         </h1>
         <p
-          className={`proxima-light text-center text-xs text-lighterGray opacity-0 duration-700 xl:text-xl ${
+          className={`proxima-light text-center text-xl text-lighterGray opacity-0 duration-700 xl:text-2xl ${
             isSubtitleVisible ? "opacity-100" : ""
           }`}
         >

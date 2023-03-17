@@ -7,11 +7,16 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [video, setVideo] = useState("/videos/trailer.mp4");
 
+  useEffect(() => {
+    innerWidth < 640 ? setVideo("/videos/video-vertical.mp4") : setVideo("/videos/trailer.mp4");
+  }, [])
+  
+
   return (
     <div className="flex flex-col">
-      <div>
+      <div className="">
         <video
-          className="fixed top-0 z-[-10] w-full md:flex"
+          className="fixed right-0 bottom-0 z-[-10] min-w-full scale-150 min-h-full md:flex"
           src={video}
           autoPlay
           muted
