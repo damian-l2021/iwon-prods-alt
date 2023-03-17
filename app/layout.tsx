@@ -1,17 +1,19 @@
+"use client"
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Image from "next/image";
 import "../styles/output.css";
-import { Poppins } from "next/font/google";
 import Menu from "../components/Menu";
-import BurgerMenu from "../components/BurgerMenu";
+import { useEffect, useState } from "react";
+import handleMenu from "../utils/handleMenu";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
+
     <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={`bg-darkGray proxima`}>
         <NavBar />
-        <Menu isVisible={false}/>
+        <Menu isActive={false}/>
         <main className="mx-auto xl:w-auto">{children}</main>
         <Footer />
       </body>
