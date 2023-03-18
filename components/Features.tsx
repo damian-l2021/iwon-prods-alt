@@ -11,9 +11,9 @@ export default function Features() {
   }, []);
 
   const linkCel =
-    "https://wa.link/8la86r";
+    "https://wa.link/cmlous";
   const linkPC =
-    "https://wa.link/8la86r";
+    "https://wa.link/cmlous";
 
   let navigator = os.platform();
 
