@@ -1,8 +1,11 @@
-export function playVideo(video){
-    video.play()
-    video.volume = 1;
+export function showControls(video) {
+  video.setAttribute('controls', true)
 }
-export function pauseVideo(video){
-    video.pause()
-    video.load()
+
+export function hideControls(video) {
+  video.removeAttribute('controls')
+}
+
+export function handleClick(video) {
+  console.log(video)
 }
