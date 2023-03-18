@@ -5,9 +5,9 @@ import getOS from "../../utils/getOS";
 import os from "os";
 
 const linkCel =
-  "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Participar%20Del%20Sorteo!";
+  "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Filmar!";
 const linkPC =
-  "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Participar%20Del%20Sorteo!";
+  "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Filmar!";
 export default function Precios() {
   let navigator = os.platform();
 
