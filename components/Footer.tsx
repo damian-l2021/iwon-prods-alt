@@ -12,7 +12,7 @@ export default function Footer(props: any) {
               width={80}
               height={0}
             />
-            <span>Lorem ipsum dolor sit amet.</span>
+            <span>Filmaciones Futuristas.</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-[14px]">

@@ -16,14 +16,14 @@ export default function Menu({ isActive }: any) {
         <CrossMenu />
       </div>
       <div className="relative flex flex-col items-center justify-center gap-10">
-        <a className="proxima text-2xl text-lightGreen" href="#">
+        <a className="proxima text-2xl text-lightGreen" href="/producciones">
           Nuestros Trabajos
         </a>
-        <a className="proxima text-2xl text-lightGreen" href="#">
-          Promociones
+        <a className="proxima text-2xl text-lightGreen" href="/precios">
+          Precios
         </a>
-        <a className="proxima text-2xl text-lightGreen" href="#">
-          Ganá Un Video
+        <a className="proxima text-2xl text-lightGreen" href="/contacto">
+          Contacto
         </a>
         <div className="absolute bottom-[-40%] md:top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>
         <div className="absolute top-[-40%] md:top-[25%] h-[5px] w-[200px] rounded-md bg-lightGreen shadow-[0_11px_29px_#5FFC7B] xl:hidden"></div>

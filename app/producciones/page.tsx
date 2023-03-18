@@ -9,7 +9,7 @@ export default function Producciones() {
         <h1 className="proxima-black mb-10 text-center text-4xl text-lighterGray xl:text-6xl">
           Nuestros Trabajos
         </h1>
-        <div className="grid grid-cols-1 gap-10 xl:grid-cols-3 mb-10">
+        <div className="mb-10 grid grid-cols-1 gap-10 xl:grid-cols-3">
           <div className="col-span-1">
             <Video src="/videos/antes-27.mp4" poster="/images/poster-27.jpeg" />
           </div>
@@ -20,13 +20,16 @@ export default function Producciones() {
             />
           </div>
           <div className="col-span-1">
-            <Video src="/videos/ensimota.mp4" poster="/images/poster-ensimota.jpeg"/>
+            <Video
+              src="/videos/ensimota.mp4"
+              poster="/images/poster-ensimota.jpeg"
+            />
           </div>
           <div className="col-span-1">
-            <Video src="/videos/mi-puta.mp4" />
+            <Video src="/videos/mi-puta.mp4" poster="images/poster-puta.jpg" />
           </div>
         </div>
-        <div className="mx-auto translate-y-[40px] h-[5px] w-[400px] rounded-[50%] bg-lightGreen blur-md"></div>
+        <div className="mx-auto h-[5px] w-[400px] translate-y-[40px] rounded-[50%] bg-lightGreen blur-md"></div>
       </div>
     </div>
   );
