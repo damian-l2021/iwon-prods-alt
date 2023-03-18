@@ -11,9 +11,9 @@ export default function Features() {
   }, []);
 
   const linkCel =
-    "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Participar%20Del%20Sorteo!";
+    "https://wa.link/8la86r";
   const linkPC =
-    "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Participar%20Del%20Sorteo!";
+    "https://wa.link/8la86r";
 
   let navigator = os.platform();
 

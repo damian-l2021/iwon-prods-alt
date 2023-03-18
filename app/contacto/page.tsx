@@ -6,9 +6,9 @@ import getOS from "../../utils/getOS";
 export default function Contacto() {
   let navigator = os.platform();
   const linkCel =
-    "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20quiero%20filmar!";
+    "https://wa.link/8la86r";
   const linkPC =
-    "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20quiero%20filmar!";
+    "https://wa.link/8la86r";
 
   return (
     <div>

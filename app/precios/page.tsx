@@ -5,21 +5,12 @@ import getOS from "../../utils/getOS";
 import os from "os";
 
 const linkCel =
-  "api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Filmar!";
+  "https://wa.link/8la86r";
 const linkPC =
-  "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20Quiero%20Filmar!";
+  "https://wa.link/8la86r";
+
 export default function Precios() {
   let navigator = os.platform();
-
-  const isHovering = (e: any) => {
-    console.log(e);
-  };
-
-  useEffect(() => {
-    document.addEventListener("DOMContentLoaded", e => {
-
-    })
-  }, []);
 
   return (
     <div className="flex h-auto w-full flex-col items-center justify-center gap-10 pt-[200px]">
@@ -54,34 +45,31 @@ export default function Precios() {
                 <div className="proxima-light text-start text-xl leading-10 text-lighterGray transition-colors group-hover:text-darkGray">
                   <div className="flex gap-8">
                     <div className="pt-2">
-                      
-                      <BsCheckCircleFill
-                        className="fill-lightGreen group-hover:fill-darkGray transition-colors"
-                      />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Jornada de 4 horas
                   </div>
                   <div className="flex gap-8">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     1 Locación
                   </div>
                   <div className="flex gap-8">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Incluye Trailer De Lanzamiento
                   </div>
                   <div className="flex gap-8">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Entrega En El Día
                   </div>
                   <div className="flex gap-8">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Ideal Para Lanzamientos Rápidos
                   </div>
@@ -109,7 +97,7 @@ export default function Precios() {
             id="2"
             className="col-span-1 min-h-[400px] rounded-md border-2 border-lightGreen transition-colors hover:bg-lightGreen"
           >
-            <div className="flex h-full flex-col items-center justify-start p-4 group">
+            <div className="group flex h-full flex-col items-center justify-start p-4">
               <div className="row-span-1 mb-4 h-[120px] ">
                 <h1 className="proxima-bold text-center text-4xl text-lighterGray transition-colors group-hover:text-darkGray">
                   Videoclip
@@ -118,38 +106,40 @@ export default function Precios() {
                   <span className="text-xl text-lighterGray transition-colors group-hover:text-darkGray">
                     <del>$79.900</del>
                   </span>
-                  <span className="text-4xl text-lighterGray transition-colors group-hover:text-darkGray">$25.900</span>
+                  <span className="text-4xl text-lighterGray transition-colors group-hover:text-darkGray">
+                    $25.900
+                  </span>
                 </div>
               </div>
               <div className="h-[400px] w-[270px]">
                 <div className="proxima-light text-start text-xl leading-10 text-lighterGray">
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Completo
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     2 Locaciones
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Incluye Iluminación Básica
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Incluye Trailer De Lanzamiento
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Entrega en 1 semana
                   </div>
@@ -176,7 +166,7 @@ export default function Precios() {
           <div
             data-card
             id="3"
-            className="col-span-1 min-h-[400px] rounded-md border-2 border-lightGreen transition-colors hover:bg-lightGreen group"
+            className="group col-span-1 min-h-[400px] rounded-md border-2 border-lightGreen transition-colors hover:bg-lightGreen"
           >
             <div className="flex h-full flex-col items-center justify-start p-4">
               <div className="row-span-1 mb-4 h-[120px]">
@@ -187,62 +177,64 @@ export default function Precios() {
                   <span className="text-xl text-lighterGray transition-colors group-hover:text-darkGray">
                     <del>$110.000</del>
                   </span>
-                  <span className="text-4xl text-lighterGray transition-colors group-hover:text-darkGray">$60.900</span>
+                  <span className="text-4xl text-lighterGray transition-colors group-hover:text-darkGray">
+                    $60.900
+                  </span>
                 </div>
               </div>
               <div className="h-[400px] w-[270px]">
                 <div className="proxima-light flex flex-col text-start text-xl leading-10 text-lighterGray">
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Completo
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     3 Locaciones
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Diferentes Lentes
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Iluminación Profesional
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Estabilizador
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Incluye Fotos
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Incluye Portada
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Video Vertical Para Historia
                   </div>
                   <div className="flex gap-8 transition-colors group-hover:text-darkGray">
                     <div className="pt-2">
-                      <BsCheckCircleFill className="fill-lightGreen group-hover:fill-darkGray transition-colors" />
+                      <BsCheckCircleFill className="fill-lightGreen transition-colors group-hover:fill-darkGray" />
                     </div>
                     Entrega en 1 semana
                   </div>

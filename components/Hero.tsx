@@ -7,9 +7,9 @@ import { smoothScroll } from "../utils/smoothScroll";
 import getOS from "../utils/getOS";
 import os from "os";
 
-const linkCel = "https://api.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20quiero%20filmar!";
+const linkCel = "https://wa.link/8la86r";
 const linkPC =
-  "https://web.whatsapp.com/send?phone=5491159427230&text=Hola%2C%20quiero%20filmar!";
+  "https://wa.link/8la86r";
 
 function Hero() {
   const [isTitleVisible, setIsTitleVisible] = useState(false);
